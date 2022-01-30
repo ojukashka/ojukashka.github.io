@@ -1,0 +1,379 @@
+/* Common Styles */
+
+@import url("https://fonts.googleapis.com/css2?family=Bellota+Text:wght@300;400;700&family=Monoton&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+  font-family: "Bellota Text", cursive;
+  font-weight: 400;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.section-heading {
+font-size: 10rem;
+font-weight: bold;
+text-transform: uppercase;
+color: #999;
+text-align: center;
+opacity: 0.1;
+text-shadow: 2rem 2rem 4rem #aaa;
+}
+
+/* End of Common Styles */
+
+/* Section 1 */
+.section-1 {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  position: relative;
+}
+
+.floating-bg {
+  width: 150vw;
+  height: 150vw;
+  background-color: #fdffb6;
+  position: absolute;
+  top: -125vw;
+  left: calc(50% - 75vw);
+  border-radius: 45%;
+}
+
+.floating-bg::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #6c757d;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  border-radius: 40%;
+  animation: rotate 30s infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.navbar {
+  position: relative;
+  z-index: 20;
+  top: 4rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navbar-link {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  color: #fff;
+  width: 1.5rem;
+  word-wrap: break-word;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.navbar-link:hover {
+  width: 15rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 2.5s;
+}
+
+.section-1-heading {
+  font-size: 8rem;
+  font-family: "Monoton",cursive;
+  position: absolute; 
+  top: 18vw;
+  left: 50%; 
+  transform: translateX(-50%);
+  text-shadow: 0.3rem 0.3rem 0.3rem #888;
+  color: #fff;
+  background-color: #fff;
+  width: 85rem;
+  text-align: center;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.8rem;
+  opacity: 0.9;
+}
+
+.logo {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo i {
+    font-size: 15rem;
+    color: #6c757d;
+    text-shadow: .1rem .1rem .2rem #ddd,-.1rem -.1rem -.2rem;
+}
+
+}
+/* End of Section 1 */
+
+/* Section 2 */
+.section-2 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5rem 0;
+}
+
+.aboutme-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70%;
+}
+
+.aboutme {
+    width: 35rem;
+    background-color: #fffeed;
+    padding: 1rem 1rem 2rem 1rem;
+    box-shadow: 1rem 1rem 2rem #ddd,-1rem -1rem 2rem #eee;
+}
+
+.aboutme-img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.aboutme-heading {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #796717;
+    margin-top: 2rem;
+}
+
+/* End of Section 2 */
+/* Section 3 */
+.section-3 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form-container {
+    width: 80%;
+    height: 60%;
+    background-color: #fffeed;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0.3rem 0.3rem 0.4rem #ccc,-0.1rem -0.1rem 0.4rem #ccc;
+    border-radius: 0.5rem;
+}
+
+.form-img {
+    width: 55vh;
+    background-color: #adb5bd;
+    padding: 5rem;
+    opacity: 0.8;
+    box-shadow: -3rem 3rem 4rem #aaa;
+    border-radius: 0.5rem;
+}
+
+.contact-form {
+    width: 55vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    border-radius: 0.5rem;
+    box-shadow: 3rem 3rem 4rem #aaa;
+}
+
+.contact-form input, .contact-form textarea {
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.3rem;
+    letter-spacing: .1rem;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: inset .1rem .1rem .2rem #ddd, inset -.1rem -.1rem .2rem #ddd;
+}
+/* End of Section 3 */
+
+/* Responsive Design */
+
+@media (max-width: 1400px) {
+  .floating-bg {
+    top: -120vw;
+  }
+
+  .section-1-heading {
+    font-size: 6rem;
+    top: 25vw;
+    width: 70rem;
+  }
+
+  .navbar-link {
+    font-size: 2rem;
+  }
+
+  .logo {
+    top: 75%;
+  }
+
+  .logo i {
+    font-size: 10rem;
+  }
+
+  .section-heading {
+    font-size: 8rem;
+    margin-bottom: 10rem;
+  }
+
+  .section-2 {
+    height: auto;
+  }
+
+  .aboutme-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .aboutme {
+    margin: 5rem 10rem;
+  }
+
+  .form-container {
+    height: 60%;
+  }
+
+  .form-img {
+    display: none;
+  }
+
+  .contact-form {
+    transform: translateY(0);
+  }
+
+  .contact-form:hover {
+    transform: translateY(-1rem);
+  }
+
+  .copyright {
+    margin: 5rem 0 4rem 0;
+  }
+}
+
+@media (max-width: 1150px) {
+  .floating-bg {
+    top: -110vw;
+  }
+
+  .section-1-heading {
+    font-size: 5rem;
+    top: 30vw;
+    width: 60rem;
+  }
+
+  .logo i {
+    font-size: 9rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .floating-bg {
+    top: -100vw;
+  }
+
+  .section-1-heading {
+    top: 40vw;
+  }
+
+  .navbar {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 750px) {
+  html {
+    font-size: 50%;
+  }
+
+  .floating-bg {
+    top: -90vw;
+  }
+
+  .section-1-heading {
+    top: 48vw;
+  }
+
+  .section-heading {
+    margin-bottom: 5rem;
+  }
+}
+
+@media (max-width: 550px) {
+  html {
+    font-size: 45%;
+  }
+
+  .floating-bg {
+    top: -70vw;
+  }
+
+  .section-1-heading {
+    top: 65vw;
+    width: 42rem;
+    font-size: 3.5rem;
+  }
+
+  .section-heading {
+    font-size: 6rem;
+  }
+
+  .aboutme {
+    margin: 5rem 0;
+  }
+
+  .section-3 {
+    height: auto;
+  }
+
+  .form-container {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .contact-form {
+    box-shadow: 1rem 1rem 2rem #aaa;
+  }
+
+  .contact-form:hover {
+    box-shadow: 2rem 2rem 3rem #aaa;
+  }
+
+  .copyright {
+    font-size: 1.8rem;
+    margin: 5rem;
+    text-align: center;
+  }
+}
+
+/* End of Responsive Design */
+
+
